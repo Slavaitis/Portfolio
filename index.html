@@ -85,6 +85,20 @@
 
   .masthead .name span { color: var(--muted); }
 
+  .masthead .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 1.1rem;
+  }
+
+  .masthead .fiverr {
+    color: var(--ink);
+    text-decoration-color: var(--ink);
+  }
+
+  .masthead .fiverr span { color: var(--muted); }
+
   /* ---------- hero ---------- */
 
   .hero {
@@ -362,18 +376,13 @@
     font-family: "Newsreader", Georgia, serif;
     font-size: clamp(1.35rem, 4vw, 2.1rem);
     letter-spacing: -0.01em;
-    text-decoration: none;
-    background-image: linear-gradient(var(--marker), var(--marker));
-    background-repeat: no-repeat;
-    background-size: 100% 0.14em;
-    background-position: 0 1em;
-    transition: background-size 180ms ease, background-position 180ms ease;
+    text-decoration: underline;
+    text-decoration-color: var(--marker);
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.16em;
   }
 
-  .cta .mail:hover {
-    background-size: 100% 0.42em;
-    background-position: 0 0.78em;
-  }
+  .cta .mail:hover { text-decoration-color: var(--paper); }
 
   .cta .small {
     margin-top: 1.5rem;
@@ -455,7 +464,10 @@
 
   <header class="masthead">
     <span class="name">Slava Popov <span>· freelance</span></span>
-    <span class="label">Data &amp; document processing</span>
+    <span class="meta">
+      <span class="label">Data &amp; document processing</span>
+      <a class="label fiverr" href="https://www.fiverr.com/s/em8K55r" target="_blank" rel="noopener">Fiverr</a>
+    </span>
   </header>
 
   <div class="hero">
@@ -631,8 +643,8 @@
   <div class="wrap">
     <p class="label">Next step</p>
     <h2>Send one file and the row count.</h2>
-    <a class="mail" href="mailto:slavaitisfame@gmail.com?subject=File%20to%20convert">slavaitisfame@gmail.com</a>
-    <p class="small">A sample page is enough to quote the whole set · no meeting required</p>
+    <a class="mail" href="https://www.fiverr.com/s/em8K55r" target="_blank" rel="noopener">Order on Fiverr</a>
+    <p class="small">Files and messages go through Fiverr · a sample page is enough to quote the whole set</p>
     <footer>
       <span>Slava Popov</span>
       <span>JavaScript · Python · C# · Excel automation</span>
